@@ -11,6 +11,7 @@
 - [Entorno virtual](#entorno-virtual)
   - [¿Qué es un entorno virtual?](#qué-es-un-entorno-virtual)
   - [Creación de un entorno virtual](#creación-de-un-entorno-virtual)
+  - [Instalación de dependencias con pip](#instalación-de-dependencias-con-pip)
 - [Alternativa a los ciclos: comprehensions](#alternativa-a-los-ciclos-comprehensions)
 - [Conceptos avanzados de funciones](#conceptos-avanzados-de-funciones)
 - [Manejo de errores](#manejo-de-errores)
@@ -111,6 +112,29 @@ Si queremos desactivarlo:
 Si deseamos ver las librerías instaladas en el ambiente:
 
 `pip freeze`
+
+## Instalación de dependencias con pip
+
+En Python `pip` es como el `npm` de JavaScript, y el archivo `requeriments.txt` es como el `package.json` de JavaScript.
+
+Pip (package installer for python) Nos permite descargar paquetes de terceros para utilizarlos en nuestro environment, ademas se puede definir una versión especifica del paquete.
+
+- `pip install <paquete>` instala el paquete(pandas , matplotlib, bokeh, etc) que se especifique.
+- `pip freeze` muestra todos los paquetes instalados en tu ambiente virtual
+
+Es importante recordar que esto se debe correr con el entorno virtual activado (avenv), de esta manera todas las dependencias que instalemos se guardaran para este entorno virtual (de lo contrario se guardarían de manera global, que es justo lo que no queremos).
+
+Algo importante, si estás manejando git, es bueno siempre ignorar la carpeta venv, esto porque realmente no nos importa subir todo eso al repositorio. Cualquier otro programador que trabaje con nuestro código creará su propio entorno virtual e instalará las dependencias que dejamos en nuestro `requeriments.txt`.
+
+Si quisiéramos que alguien mas pueda ejecutar nuestro proyecto es importante compartir que librería y versión hemos empleado; eso se realiza con el comando:
+
+- `pip freeze > requirements.txt`
+
+El resultado de `pip freeze` se escribe en `requirements.txt` (puedes usar otro nombre pero el mostrado es una buena practica)
+
+Para instalar paquetes desde un archivo como requirements.txt ejecutamos:
+
+- `pip install -r requirements.txt`
 
 # Alternativa a los ciclos: comprehensions
 
