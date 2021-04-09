@@ -12,6 +12,7 @@
   - [¿Qué es un entorno virtual?](#qué-es-un-entorno-virtual)
   - [Creación de un entorno virtual](#creación-de-un-entorno-virtual)
   - [Instalación de dependencias con pip](#instalación-de-dependencias-con-pip)
+  - [Una alternativa: Anaconda](#una-alternativa-anaconda)
 - [Alternativa a los ciclos: comprehensions](#alternativa-a-los-ciclos-comprehensions)
 - [Conceptos avanzados de funciones](#conceptos-avanzados-de-funciones)
 - [Manejo de errores](#manejo-de-errores)
@@ -135,6 +136,35 @@ El resultado de `pip freeze` se escribe en `requirements.txt` (puedes usar otro 
 Para instalar paquetes desde un archivo como requirements.txt ejecutamos:
 
 - `pip install -r requirements.txt`
+
+## Una alternativa: Anaconda
+
+[Anaconda](https://www.anaconda.com/products/individual)
+
+![](https://imgur.com/xwX9Ftl.png)
+
+Podemos crear un entorno virtual de anaconda mediante el Anaconda Prompt con los siguientes comandos.
+
+- Crear entorno virtual
+`conda create --name venv`
+
+- Para activar el entorno virtual se utiliza:
+`conda activate venv`
+
+- Para desactivarlo
+`conda deactivate`
+
+- Para ver los entornos virtuales instalados se usa
+`conda env list`
+
+- Instalar modulos
+`conda install <modulo>`
+
+- O también mediante un archivo requirements.txt
+`conda install --file requirements.txt`
+
+- Para crear el archivo requirements.txt parecido al freeze en python se usa
+`conda list --export > requirements.txt`
 
 # Alternativa a los ciclos: comprehensions
 
