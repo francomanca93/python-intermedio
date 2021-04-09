@@ -9,6 +9,7 @@
   - [El Zen de Python](#el-zen-de-python)
   - [¿Qué es la documentación?](#qué-es-la-documentación)
 - [Entorno virtual](#entorno-virtual)
+  - [¿Qué es un entorno virtual?](#qué-es-un-entorno-virtual)
 - [Alternativa a los ciclos: comprehensions](#alternativa-a-los-ciclos-comprehensions)
 - [Conceptos avanzados de funciones](#conceptos-avanzados-de-funciones)
 - [Manejo de errores](#manejo-de-errores)
@@ -64,8 +65,29 @@ PEP (propuestas de mejoras de python)
 
 En el apartado [PEPindex](https://www.python.org/dev/peps/) Nos indica como el lenguaje funciona y como se debería escribir de forma correcta. Todo lo relacionado a buenas practicas en la escritura del código (identacion, comentarios, nombres recomendados) lo encontramos en [PEP8](https://www.python.org/dev/peps/pep-0008/).
 
-
 # Entorno virtual
+
+## ¿Qué es un entorno virtual?
+
+> El entorno virtual permite aislar las dependencias de los proyectos en Python.
+
+Los entornos virtuales son de mucha utilidad ya que nos ayudan a tener versiones especificas de librerías o módulos a un proyecto sin afectar a otros. De esta forma en el mismo equipo pueden coexistir distintos proyectos con distintas versiones de la misma librería o modulo.
+
+- **Sin entorno virtual**
+
+Tenemos a nuestros modulos de forma global.
+![](https://imgur.com/FwmWrnP.png)
+
+Si un modulo se actualiza puede afectar a un proyecto
+![](https://imgur.com/8LWuztH.png)
+
+- **Con entorno virtual**
+
+Tenemos a nuestros modulos por proyecto
+![](https://imgur.com/6rRaiMe.png)
+
+Si un modulo se actualiza solo afectará al proyecto que tenga ese entorno.
+![](https://imgur.com/RMz5eCI.png)
 
 # Alternativa a los ciclos: comprehensions
 
