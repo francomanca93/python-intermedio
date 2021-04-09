@@ -10,6 +10,7 @@
   - [¿Qué es la documentación?](#qué-es-la-documentación)
 - [Entorno virtual](#entorno-virtual)
   - [¿Qué es un entorno virtual?](#qué-es-un-entorno-virtual)
+  - [Creación de un entorno virtual](#creación-de-un-entorno-virtual)
 - [Alternativa a los ciclos: comprehensions](#alternativa-a-los-ciclos-comprehensions)
 - [Conceptos avanzados de funciones](#conceptos-avanzados-de-funciones)
 - [Manejo de errores](#manejo-de-errores)
@@ -88,6 +89,28 @@ Tenemos a nuestros modulos por proyecto
 
 Si un modulo se actualiza solo afectará al proyecto que tenga ese entorno.
 ![](https://imgur.com/RMz5eCI.png)
+
+## Creación de un entorno virtual
+
+Python 3 trae la creación y manejo de entornos virtuales como parte del modulo central.
+
+Para crear un entorno virtual utilizas:
+
+`python3 -m venv .NOMBRE-ENTORNO`
+
+Nota:.NOMBRE-ENTORNO es el nombre de del ambiente. El punto delante es para que sea una carpeta oculta
+
+Para activarlo:
+
+`source -m ./.env/bin/activate`
+
+Si queremos desactivarlo:
+
+`deactivate`
+
+Si deseamos ver las librerías instaladas en el ambiente:
+
+`pip freeze`
 
 # Alternativa a los ciclos: comprehensions
 
