@@ -7,6 +7,7 @@
 
 - [Introducción](#introducción)
   - [El Zen de Python](#el-zen-de-python)
+  - [¿Qué es la documentación?](#qué-es-la-documentación)
 - [Entorno virtual](#entorno-virtual)
 - [Alternativa a los ciclos: comprehensions](#alternativa-a-los-ciclos-comprehensions)
 - [Conceptos avanzados de funciones](#conceptos-avanzados-de-funciones)
@@ -50,6 +51,19 @@
   - Si somos capaces de explicar nuestra implementación a otros desarrolladores paso a paso, es una buena idea. En cambio si no podemos hacerlo, significa que ni nosotros entendemos la implementación y deberíamos repensar nuestra forma de encarar la solución.
 - **Los espacios de nombres son una gran idea, ¡Tengamos más de esos! (namespaces)**:
   - Es el nombre que se ha indicado luego de la palabra import, es decir la ruta (namespace) del módulo.
+
+## ¿Qué es la documentación?
+
+> La documentación es la biblia de cualquier programador
+
+La documentación es fundamental para aprender cualquier lenguaje de programación, ya que nos ayuda a entender todas esas pequeñas piezas para que todo funcione correctamente.
+
+La documentación de python esta en: https://docs.python.org/es/3/
+
+PEP (propuestas de mejoras de python)
+
+En el apartado [PEPindex](https://www.python.org/dev/peps/) Nos indica como el lenguaje funciona y como se debería escribir de forma correcta. Todo lo relacionado a buenas practicas en la escritura del código (identacion, comentarios, nombres recomendados) lo encontramos en [PEP8](https://www.python.org/dev/peps/pep-0008/).
+
 
 # Entorno virtual
 
