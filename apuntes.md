@@ -18,6 +18,7 @@
   - [List comprehension](#list-comprehension)
   - [Dictionary comprehensions](#dictionary-comprehensions)
 - [Conceptos avanzados de funciones](#conceptos-avanzados-de-funciones)
+  - [Funciones anónimas: lambda](#funciones-anónimas-lambda)
 - [Manejo de errores](#manejo-de-errores)
 - [Manejo de archivos](#manejo-de-archivos)
 
@@ -215,7 +216,28 @@ Para cada elemento en un iterable yo voy a colocar una llave y un valor solo si 
 Ejemplo:
 
 ![](https://imgur.com/uPJOB0W.png)
+
 # Conceptos avanzados de funciones
+
+## Funciones anónimas: lambda
+
+[Lambda expressions - Doc oficial](https://docs.python.org/3/tutorial/controlflow.html?highlight=lambda#lambda-expressions)
+
+Son funciones que no tienen un identificardor (nombre), retornan un objeto de tipo función que guardalemos en una variable.
+
+- Sintaxis: `lambda argumentos: expresión` (se escriben en una sola línea de código)
+- No necesitan la palabra clave return
+
+![](https://imgur.com/TrmgQqa.png)
+
+Veamos las partes con un ejemplo, [su script](lambda_ex.py)
+![](https://imgur.com/9GRiHOa.png)
+![](https://imgur.com/yb7ALHX.png)
+
+Comparando una función lambda con una definicion de función normal:
+
+![](https://imgur.com/4N7rA5W.png)
+![](https://imgur.com/Jpvh9lI.png)
 
 # Manejo de errores
 
