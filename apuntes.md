@@ -15,6 +15,7 @@
   - [Una alternativa: Anaconda](#una-alternativa-anaconda)
 - [Alternativa a los ciclos: comprehensions](#alternativa-a-los-ciclos-comprehensions)
   - [Listas y diccionarios anidados](#listas-y-diccionarios-anidados)
+  - [List comprehension](#list-comprehension)
 - [Conceptos avanzados de funciones](#conceptos-avanzados-de-funciones)
 - [Manejo de errores](#manejo-de-errores)
 - [Manejo de archivos](#manejo-de-archivos)
@@ -172,6 +173,33 @@ Podemos crear un entorno virtual de anaconda mediante el Anaconda Prompt con los
 ## Listas y diccionarios anidados
 
 [Practica de Listas y diccionarios anidados](lists_and_dicts.py)
+
+## List comprehension
+
+[Practica de Listas comprehension](list_comprehension.py)
+
+[List comprehension - Doc oficial](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
+
+Como se lee lo siguiente:
+
+Para cada elemento en el iterable, ese elemento, solo si se cumple la condición.
+
+- PARTE 2: Para cada elemento en el iterable,
+- PARTE 1: ese elemento,
+- PARTE 3: solo si se cumple la condición.
+
+![](https://imgur.com/Zs2iH9B.png)
+
+Ejemplo realizado tambien en el script:
+
+Como se lee lo siguiente:
+
+Guardame en una lista:
+Cada elemento en que se encuentre en un rango de 1 a 101, que se elemento sea elevado al cuadrado, solo si no son multiplos de 3 (elemento aplicando el modulo 3 sea diferente de 0)
+
+![](https://imgur.com/1lRhTHW.png)
+
+![](https://imgur.com/k2MrsGc.png)
 
 # Conceptos avanzados de funciones
 
