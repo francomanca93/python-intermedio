@@ -14,6 +14,7 @@
   - [Instalación de dependencias con pip](#instalación-de-dependencias-con-pip)
   - [Una alternativa: Anaconda](#una-alternativa-anaconda)
 - [Alternativa a los ciclos: comprehensions](#alternativa-a-los-ciclos-comprehensions)
+  - [Listas y diccionarios anidados](#listas-y-diccionarios-anidados)
 - [Conceptos avanzados de funciones](#conceptos-avanzados-de-funciones)
 - [Manejo de errores](#manejo-de-errores)
 - [Manejo de archivos](#manejo-de-archivos)
@@ -167,6 +168,10 @@ Podemos crear un entorno virtual de anaconda mediante el Anaconda Prompt con los
 `conda list --export > requirements.txt`
 
 # Alternativa a los ciclos: comprehensions
+
+## Listas y diccionarios anidados
+
+[Practica de Listas y diccionarios anidados](lists_and_dicts.py)
 
 # Conceptos avanzados de funciones
 
