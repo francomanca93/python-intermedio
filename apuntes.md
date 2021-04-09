@@ -16,6 +16,7 @@
 - [Alternativa a los ciclos: comprehensions](#alternativa-a-los-ciclos-comprehensions)
   - [Listas y diccionarios anidados](#listas-y-diccionarios-anidados)
   - [List comprehension](#list-comprehension)
+  - [Dictionary comprehensions](#dictionary-comprehensions)
 - [Conceptos avanzados de funciones](#conceptos-avanzados-de-funciones)
 - [Manejo de errores](#manejo-de-errores)
 - [Manejo de archivos](#manejo-de-archivos)
@@ -201,6 +202,19 @@ Cada elemento en que se encuentre en un rango de 1 a 101, que se elemento sea el
 
 ![](https://imgur.com/k2MrsGc.png)
 
+## Dictionary comprehensions
+
+[Practica de Listas comprehension](dict_comprehension.py)
+
+[Dict comprehension - Doc oficial](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
+
+Para cada elemento en un iterable yo voy a colocar una llave y un valor solo si se corresponde a una condicion
+
+![](https://imgur.com/iDTq9Qk.png)
+
+Ejemplo:
+
+![](https://imgur.com/uPJOB0W.png)
 # Conceptos avanzados de funciones
 
 # Manejo de errores
