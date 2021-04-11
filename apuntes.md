@@ -23,6 +23,7 @@
     - [filter](#filter)
     - [map](#map)
     - [reduce](#reduce)
+    - [Mini Proyecto: filtrando datos](#mini-proyecto-filtrando-datos)
 - [Manejo de errores](#manejo-de-errores)
 - [Manejo de archivos](#manejo-de-archivos)
 
@@ -296,6 +297,12 @@ allMultiplied = reduce(lambda a, b: a * b, myList3)
 print(allMultiplied)
 # 32
 ```
+
+### Mini Proyecto: filtrando datos
+
+En el siguiente archivo hacemos uso de **las funciones de orden superior** comparando los filtrados con **list comprehension**.
+
+[Mini Proyecto: filtrando datos](filtrando_datos.py)
 
 # Manejo de errores
 
