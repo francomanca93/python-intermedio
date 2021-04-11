@@ -19,6 +19,10 @@
   - [Dictionary comprehensions](#dictionary-comprehensions)
 - [Conceptos avanzados de funciones](#conceptos-avanzados-de-funciones)
   - [Funciones anónimas: lambda](#funciones-anónimas-lambda)
+  - [High order functions: filter, map y reduce](#high-order-functions-filter-map-y-reduce)
+    - [filter](#filter)
+    - [map](#map)
+    - [reduce](#reduce)
 - [Manejo de errores](#manejo-de-errores)
 - [Manejo de archivos](#manejo-de-archivos)
 
@@ -238,6 +242,60 @@ Comparando una función lambda con una definicion de función normal:
 
 ![](https://imgur.com/4N7rA5W.png)
 ![](https://imgur.com/Jpvh9lI.png)
+
+## High order functions: filter, map y reduce
+
+Las funciones de orden superior, son funciones que reciben como parámetro a otra función.
+
+![](https://imgur.com/K4ZAZ1m.png)
+
+### filter
+
+`filter` → recibe una función filtro (anónima) y un iterable (lista, tupla, etc) devolviendonos un iterador: objeto optimizado recorrer elemento a elemento (iterar) por lo que no lo podemos imprimir de manera directa (para ello lo convertimos a una lista), su sintaxis es: `filter(<funcion filtro>, <iterable>)`
+
+- `filter` devuelve `True` or `False` según el valor esté dentro de los criterios buscados o no. En caso de que no cumpla con la condición, no será devuelto y la lista se verá reducida por este filtro.
+
+```py
+#Filter: Filtrar numeros impares
+myList = [1,4,5,6,9,13,19,21]
+
+odd = list(filter(lambda x: x % 2 != 0, myList))
+print(odd)
+# [1,5,9,13,19,21]
+ 
+```
+
+### map
+
+- `map` → al igual que filter recibe una función anónima y un iterable como parámetros pero en este caso map ejecuta la función sobre cada uno de los elementos del iterable, sintaxis: `map(<funcion>, <iterable>)`
+
+- `map` no puede eliminar valores de la lista del array entregado. Es decir, el output tiene la misma cantidad de valores que el input.
+
+```py
+
+#Map
+myList2 = [1, 2, 3, 4, 5]
+
+squares = list(map(lambda x: x**2, myList2))
+print(squares)
+# [1, 4, 9, 16, 25]
+```
+
+### reduce
+
+- `reduce` → tenemos que importar esta función desde `functools` para poder usarla, tiene los mismos argumentos que las anteriores funciones, reduce el iterable por medio de la función anonima, su sintaxis es: `reduce(<funcion reduccion>, <iterable>)`.
+
+- La función de reducción necesita de dos parámetros, uno que almacena el resultado (o el primer valor del iterable) y otro que opera con el siguiente valor del iterable: `lambda a,b: <expresión>`. Toma a estos 2 valores entregados como parámetros y el iterador como otro parámetro. Realiza la función con estos 2 valores, y luego con el resultado de esto y el valor que le sigue en el array. Y así hasta pasar por todos los valores de la lista.
+
+```py
+from functools import reduce
+
+myList3 = [2, 2, 2, 2, 2]
+
+allMultiplied = reduce(lambda a, b: a * b, myList3)
+print(allMultiplied)
+# 32
+```
 
 # Manejo de errores
 
