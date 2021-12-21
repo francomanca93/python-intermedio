@@ -30,6 +30,7 @@
     - [Elevar una excepción](#elevar-una-excepción)
   - [Debugging](#debugging)
   - [Manejo de Excepciones](#manejo-de-excepciones)
+  - [Assert statements](#assert-statements)
 - [Manejo de archivos](#manejo-de-archivos)
 
 # Introducción
@@ -434,5 +435,17 @@ Resumen:
 > [Errors and Exceptions by Docs Ofical de Python](https://docs.python.org/3/tutorial/errors.html)
 
 > Poniendo a prueba el manejo de excepciones en [debuggin.py](debugging.py)
+
+## Assert statements
+
+- Evalúa una condicional, si esta se cumple continuamos con el flujo normal del python, si no se cumple eleva un error del tipo AssertionError y nos muestra un mensaje.
+- A diferencia de try-except no devuelve el traceback completo.
+
+Su sintaxis es:
+
+```python
+assert <condicion>, <"mensaje">
+<código>
+```
 
 # Manejo de archivos
