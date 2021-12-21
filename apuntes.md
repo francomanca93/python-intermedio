@@ -28,6 +28,7 @@
   - [Los errores en el código](#los-errores-en-el-código)
     - [Lectura de un traceback](#lectura-de-un-traceback)
     - [Elevar una excepción](#elevar-una-excepción)
+  - [Debugging](#debugging)
 - [Manejo de archivos](#manejo-de-archivos)
 
 # Introducción
@@ -375,4 +376,29 @@ Así que si quisiéramos ver gráficamente como se elevan las excepciones, serí
 
 
 > [Python Exceptions: An Introduction by RealPython - EXCELENTE](https://realpython.com/python-exceptions/)
+
+## Debugging
+
+Debugging o depuración es una herramienta que traen varios editores de código con el objetivo de solucionar nuestros errores de lógica. Revisemos la herramienta debugging de VSCode. En este entorno podemos acceder a funcionalidades como:
+
+> [Python debugging in VS Code](https://code.visualstudio.com/docs/python/debugging)
+
+![debungging-tool](https://imgur.com/HRrCg6t.png)
+
+Funcionalidades de debugging de VSCode:
+
+- `pause` → permite pausar la ejecución del programa
+- `step over` → permite avanazr un solo paso en el programa
+- `step in` → igresamos a un bloque secundario del programa (funciones)
+- `step out` → salimos del bloque secundario
+- `restart` → reinicia el programa
+- `stop` → detiene el programa
+
+Además podemos generar `breakpoints`, que son puntos en los que el programa se detendrá para ayudarnos a depurar el código
+
+> Nota: Existen herramientas de debugging propias de python como el módulo pdb o los breakpoints (a partir de python 3.7).
+> - [pdb — The Python Debugger](https://docs.python.org/3/library/pdb.html).
+> - [Python Debugging With Pdb by RealPython](https://realpython.com/python-debugging-pdb/)
+
+El archivo [debuggin.py](debugging.py) nos sirvio para entender y practicar estos conceptos prácticos.
 # Manejo de archivos
