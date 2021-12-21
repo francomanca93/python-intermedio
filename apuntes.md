@@ -29,6 +29,7 @@
     - [Lectura de un traceback](#lectura-de-un-traceback)
     - [Elevar una excepción](#elevar-una-excepción)
   - [Debugging](#debugging)
+  - [Manejo de Excepciones](#manejo-de-excepciones)
 - [Manejo de archivos](#manejo-de-archivos)
 
 # Introducción
@@ -401,4 +402,35 @@ Además podemos generar `breakpoints`, que son puntos en los que el programa se 
 > - [Python Debugging With Pdb by RealPython](https://realpython.com/python-debugging-pdb/)
 
 El archivo [debuggin.py](debugging.py) nos sirvio para entender y practicar estos conceptos prácticos.
+
+## Manejo de Excepciones
+
+- `try-except` → Anidamos nuestro programa en dos bloques de código, el primero es el programa per se (el que se ejecuta normalmente, sin errores) y el segundo representa las instrucciones a seguir en caso de error.
+  - `<error>` es un parámetro opcional, permite capturar sólo el tipo de error indicado, si no se coloca captura todos los errores posibles (es buena práctica capturar cada tipo de error por separado).
+  - `as <alias>` nos permite crear un alias al error, para trabajar con él.
+
+Ejemplo:
+
+```python
+try:
+    <bloque1>
+except <error> as <alias>:
+    <bloque 2>
+```
+
+- `raise` → Esta instrucción nos permite generar errores, es decir crear nuestros propios errores cuando detectemos que nuestro programa no actúa como debería con cierto tipo de datos.
+Su sintaxis es:
+
+```python
+raise <NombreError>("<descripci[on del error>")
+```
+
+- `fynally` → Es una bloque de código que se ejecuta exista un error o no (un tercer bloque después de try except), no es muy usual pero puede darse para **cerrar archivos, conexiones a BBDD o liberar recursos**.
+
+Resumen:
+
+![manejo-exception](https://imgur.com/HJ570dB.png)
+
+> [Errors and Exceptions by Docs Ofical de Python](https://docs.python.org/3/tutorial/errors.html)
+
 # Manejo de archivos
