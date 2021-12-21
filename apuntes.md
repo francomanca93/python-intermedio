@@ -25,6 +25,9 @@
     - [reduce](#reduce)
     - [Mini Proyecto: filtrando datos](#mini-proyecto-filtrando-datos)
 - [Manejo de errores](#manejo-de-errores)
+  - [Los errores en el código](#los-errores-en-el-código)
+    - [Lectura de un traceback](#lectura-de-un-traceback)
+    - [Elevar una excepción](#elevar-una-excepción)
 - [Manejo de archivos](#manejo-de-archivos)
 
 # Introducción
@@ -306,4 +309,70 @@ En el siguiente archivo hacemos uso de **las funciones de orden superior** compa
 
 # Manejo de errores
 
+## Los errores en el código
+
+Cuando python nos avisa que tenemos un error en el código nos muestra un mensaje que conocemos como traceback, puede ser debido a:
+
+- Errores de Sintaxis (**SyntaxError**) → escribimos mal alguna palabra clave (typo), el programa no se ejecuta.
+- Excepciones (**Exeption**) → Producen un colapso o interrupción de la lógica del programa en alguna línea en específico por ejemplo (todas las líneas anteriores se ejecutan). Pueden ser de varios tipos, generalmente aparecen cuando no existe un componente clave en la ejecución o hay alguna imposibilidad lógica (matemática) para efectuar la instrucción, tambien pueden generarse dentro del código o fuera de el (elevar una excepción).
+
+![errores](https://imgur.com/BwUjJMi.png)
+
+Ejemplos:
+- `KeyboardInterrupt` -> Ctrl + C
+- `KeyError` -> Cuando tratamos de acceder a una llave que no existe
+- `IndexError` -> Cuando tratamos de acceder a un índice que no existe
+- `FileNotFoundError` -> Archivo que no existe
+- `ZeroDivisionError` -> Dividir entre 0
+- `ImportError` -> Intentamos importar un módulo que tiene un error
+
+> [Excepciones incorporadas by Docs Oficial de Python - TODAS LAS EXCEPCIONES QUE EXISTEN ](https://docs.python.org/es/3/library/exceptions.html)
+
+### Lectura de un traceback
+
+- La manera correcta de leer un traceback es iniciar por el final, en el caso de un error de sintaxis nos indicará en qué línea se encuentra dicho error.
+- En el caso de excepciones la última línea nos indicará el tipo de exepcion que se generó (generalmente son autoexplicativas pero si no entienedes que paso puedes buscar este error)
+- La penúltima línea nos indicará dende se encuentra el error (archivo y línea)
+- La antepenúltima línea nos muestra “most recent call last” lo que significa que la llamada más reciente es la última (el programa se cerró después de esa llamada, se genero un error).
+
+### Elevar una excepción
+
+Cuando tenemos una excepción en python lo que sucede es que se crea un objeto de tipo **exception** que se va moviendo a través de los bloques de código hasta llegar al bloque principal si es que no se maneja dicha excepción en algún bloque intermedio el programa se interrumpe y genera el **traceback**.
+
+Cómo funciona el **levantamiento de excepciones** en Python, **cuando estas no son controladas**. El código es el siguiente:
+
+```python
+def run():
+    function1()
+
+
+def function1():
+    function2()
+
+
+def function2():
+    function3()
+
+
+def function3():
+    exception_code = 1 / 0
+    
+
+if __name__ == '__main__':
+    
+    run()
+```
+En este caso la excepción se generará en function3.
+Así se ve el traceback que se genera en la consola al correr el código anterior:
+
+![traceback](https://imgur.com/nBkvpat.png)
+
+Si empezamos a leer el traceback de abajo hacia arriba nos podemos dar cuenta que efectivamente la excepción se genera en function3. Si seguimos leyendo el traceback hacia arriba nos daremos cuenta que después se menciona la function2, posteriormente a function1 y finalmente a run().
+
+Así que si quisiéramos ver gráficamente como se elevan las excepciones, sería algo así:
+
+![como-se-eleva-el-error](https://imgur.com/8aMlSwq.png)
+
+
+> [Python Exceptions: An Introduction by RealPython - EXCELENTE](https://realpython.com/python-exceptions/)
 # Manejo de archivos
