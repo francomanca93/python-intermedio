@@ -6,9 +6,18 @@ def divisor(num):
     return divisors
 
 def run():
-    num = int(input("Enter a number: "))
-    print(divisor(num))
-    print('Finished')
+    try:
+        num = int(input("Enter a number: "))
+        if num < 0:
+            raise ValueError("Valor negativo. Solo insertar positivos")
+        if num == 0:
+            raise ValueError("El valor ingresado es 0. Debe ser un valor mayor a 1")
+        print(divisor(num))
+        print('Finished')
+    except ValueError as ve:
+        print(ve)
+    except Exception as e:
+        print(e)
 
 if __name__ == '__main__':
     run()

@@ -433,4 +433,6 @@ Resumen:
 
 > [Errors and Exceptions by Docs Ofical de Python](https://docs.python.org/3/tutorial/errors.html)
 
+> Poniendo a prueba el manejo de excepciones en [debuggin.py](debugging.py)
+
 # Manejo de archivos
