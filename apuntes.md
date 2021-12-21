@@ -94,18 +94,22 @@ Los entornos virtuales son de mucha utilidad ya que nos ayudan a tener versiones
 - **Sin entorno virtual**
 
 Tenemos a nuestros modulos de forma global.
-![](https://imgur.com/FwmWrnP.png)
+
+![sin-venv-global-module](https://imgur.com/FwmWrnP.png)
 
 Si un modulo se actualiza puede afectar a un proyecto
-![](https://imgur.com/8LWuztH.png)
+
+![sin-venv-global-module2](https://imgur.com/8LWuztH.png)
 
 - **Con entorno virtual**
 
 Tenemos a nuestros modulos por proyecto
-![](https://imgur.com/6rRaiMe.png)
+
+![con-venv-x-proyecto](https://imgur.com/6rRaiMe.png)
 
 Si un modulo se actualiza solo afectará al proyecto que tenga ese entorno.
-![](https://imgur.com/RMz5eCI.png)
+
+![con-venv-x-proyecto2](https://imgur.com/RMz5eCI.png)
 
 ## Creación de un entorno virtual
 
@@ -239,22 +243,25 @@ Son funciones que no tienen un identificardor (nombre), retornan un objeto de ti
 - Sintaxis: `lambda argumentos: expresión` (se escriben en una sola línea de código)
 - No necesitan la palabra clave return
 
-![](https://imgur.com/TrmgQqa.png)
+![lambda](https://imgur.com/TrmgQqa.png)
 
 Veamos las partes con un ejemplo, [su script](lambda_ex.py)
-![](https://imgur.com/9GRiHOa.png)
-![](https://imgur.com/yb7ALHX.png)
+
+![lambda-ejemplo0](https://imgur.com/9GRiHOa.png)
+
+![lambda-ejemplo1](https://imgur.com/yb7ALHX.png)
 
 Comparando una función lambda con una definicion de función normal:
 
-![](https://imgur.com/4N7rA5W.png)
-![](https://imgur.com/Jpvh9lI.png)
+![lambda-ejemplo3](https://imgur.com/4N7rA5W.png)
+
+![lambda-ejemplo4](https://imgur.com/Jpvh9lI.png)
 
 ## High order functions: filter, map y reduce
 
 Las funciones de orden superior, son funciones que reciben como parámetro a otra función.
 
-![](https://imgur.com/K4ZAZ1m.png)
+![high-order-functions](https://imgur.com/K4ZAZ1m.png)
 
 ### filter
 
