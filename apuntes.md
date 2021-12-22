@@ -32,6 +32,12 @@
   - [Manejo de Excepciones](#manejo-de-excepciones)
   - [Assert statements](#assert-statements)
 - [Manejo de archivos](#manejo-de-archivos)
+  - [¿Cómo trabajar con archivos?](#cómo-trabajar-con-archivos)
+    - [Tipos de archivos](#tipos-de-archivos)
+      - [Texto](#texto)
+      - [Binarios](#binarios)
+    - [Modos de Apertura](#modos-de-apertura)
+    - [Apertura](#apertura)
 
 # Introducción
 
@@ -456,3 +462,53 @@ assert <condicion>, <"mensaje">
 ```
 
 # Manejo de archivos
+
+## ¿Cómo trabajar con archivos?
+
+### Tipos de archivos
+
+![tipos-archivos](https://imgur.com/lSZLPAG.png)
+
+#### Texto
+
+- `.csv`: De información. Acá por ejemplo suelen estar almacenadas muchas estructuras y bases de datos que nosotros usaremos para trabajar. Muy utilizado en DS.
+- `.py`: Se usa para editar los scripts en Python.
+- `.json`: Manera de compartir información mediante diferentes servicios cuando se realiza una app web. Sirve mucho para el backend.
+- `.xml`: También nos sirve para compartir información
+- `.txt`: De texto plano. Muy habitual.
+- `.js`: JavaScript, de código para programar interacción en páginas web.
+- `.css`: De código para programar estilos en páginas web.
+
+#### Binarios
+
+Puedes manejar archivos `.mp3, .mp4, .jpg, .png` en python. 
+
+Ejemplo: Modificacion de archivos de imagenes y video:
+
+- El el area de visión artificial en donde librerias como openCV lo hacen bastante amigable e interesante, por ejemplo, un video en formato .mp4 es perfectamente transformable en una matriz numérica que representa por medio de estos número los canales RGB que posee cada pixel y que en general almacena la totalidad del pixeles de una imagen.
+[Image Processing (imgproc module) by opencv](https://docs.opencv.org/master/d7/da8/tutorial_table_of_content_imgproc.html)
+
+----------------
+
+> Trabajaremos en este curso solo con tipo de archivos de texto.
+
+### Modos de Apertura
+
+- `r` → Solo lectura
+- `r+` → Lectura y escritura
+- `w` → Solo escritura. Sobre escribe el archivo si existe. Crea el archivo si no existe
+- `w+` → Escritura y lectura. Sobre escribe el archivo si existe. Crea el archivo si no existe
+- `a` → Añadido (agregar contenido). Crea el archivo si éste no existe
+- `a+` → Añadido (agregar contenido) y lectura. Crea el archivo si éste no existe.
+
+### Apertura
+
+```python
+with open(<ruta>, <modo_apertura>) as <nombre>`
+```
+
+- `with` Es un manejador contextual, nos ayuda a controlar el flujo del archivo (sirve para que el archivo no se dañe cuando existe algún cierre inesperado)
+- `open(ruta,modo_apertura)`: es una función que necesita de dos parámetros
+  - `ruta`: es donde se encuentra nuestro archivo en nuestro equipo
+  - `modo_de_apertura`: como vamos a abrir el archivo, los modificadores son las que tenemos en [modos de apertura](#modos-de-apertura)
+- `as <nombre>` nos ayuda a darle una abreviatura o un nombre a los datos que acabamos de leer. Como convencion general usamos `f`
