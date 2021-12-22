@@ -39,6 +39,10 @@
     - [Modos de Apertura](#modos-de-apertura)
     - [Apertura](#apertura)
     - [Trabajando con archivos de texto en Python](#trabajando-con-archivos-de-texto-en-python)
+- [Reto final: Juego del Ahorcado o Hangman Game](#reto-final-juego-del-ahorcado-o-hangman-game)
+  - [Reglas](#reglas)
+  - [Ayuda y pistas](#ayuda-y-pistas)
+  - [Mejoras en el juego](#mejoras-en-el-juego)
 
 # Introducción
 
@@ -517,3 +521,24 @@ with open(<ruta>, <modo_apertura>) as <nombre>`
 ### Trabajando con archivos de texto en Python
 
 [archivos.py](archivos.py)
+
+# Reto final: Juego del Ahorcado o Hangman Game
+
+## Reglas
+
+- Incorpora comprehensions, manejo de errores y manejo de archivos.
+- Utiliza el archivo data.txt y léelo para obtener las palabras.
+
+## Ayuda y pistas
+
+- Investiga la función `enumerate`
+- El método `get` de los diccionarios puede servir.
+- La sentencia para limpiar la pantalla es:
+  - `os.system('cls')` -> Para Windows.
+  - `os.system('clear')` -> Para Linux.
+
+## Mejoras en el juego
+
+- Añade un sistema de puntos.
+- Dibuja el "ahorcado" en cada jugada con **código ASCII**.
+- Mejora la interfaz.
