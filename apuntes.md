@@ -38,6 +38,7 @@
       - [Binarios](#binarios)
     - [Modos de Apertura](#modos-de-apertura)
     - [Apertura](#apertura)
+    - [Trabajando con archivos de texto en Python](#trabajando-con-archivos-de-texto-en-python)
 
 # Introducción
 
@@ -512,3 +513,7 @@ with open(<ruta>, <modo_apertura>) as <nombre>`
   - `ruta`: es donde se encuentra nuestro archivo en nuestro equipo
   - `modo_de_apertura`: como vamos a abrir el archivo, los modificadores son las que tenemos en [modos de apertura](#modos-de-apertura)
 - `as <nombre>` nos ayuda a darle una abreviatura o un nombre a los datos que acabamos de leer. Como convencion general usamos `f`
+
+### Trabajando con archivos de texto en Python
+
+[archivos.py](archivos.py)
